@@ -1,0 +1,135 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: initial;
+}
+
+/* css for the header and it's content */
+/*#region */
+header {
+    background-color: #715dd6;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    color: #f5db88;
+    font-size: 2.2em;
+    font-variant: small-caps;
+    cursor: pointer
+}
+
+
+/* ! hidding the buttons for now until i find something better to do with them */
+/* #toggles {
+    position: absolute;
+    align-self: flex-end;
+    max-width: 100px;
+    text-align: right;
+
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+} */
+
+/*#endregion  */
+
+
+
+
+/* css for the terminal window */
+/* #region */
+
+#terminal-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#terminal-screen {
+    width: auto;
+    height: 400px;
+    margin: 20px;
+    border: 1px solid #333;
+    background: black;
+}
+
+/* #endregion */
+
+/* css for the themes and settings dropdowns */
+/* #region */
+
+article {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+span {
+    padding: 15px;
+    background: #715dd6;
+    color: #f5db88;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    cursor: pointer;
+    display: block;
+}
+
+span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+.slide li {
+    padding: 20px;
+    background: #9791fb;
+}
+
+.slide a {
+
+    color: #f5db88;
+    font-size: 1em;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+#dropdown-settings {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#dropdown-settings:checked+.slide {
+    height: 300px;
+}
+
+#dropdown-themes {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#dropdown-themes:checked+.slide {
+    height: 300px;
+}
+
+/* #endregion */
